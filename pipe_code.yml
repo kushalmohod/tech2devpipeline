@@ -1,0 +1,14 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+  - stage: FirstStage
+    displayName: 'Initial Step'
+    jobs:
+      - job: FirstJob
+        steps:
+          - script: echo "Starting pipeline..."
+            displayName: 'Run Initial Script'
